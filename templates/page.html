@@ -1,0 +1,9 @@
+$def with (page)
+$if page.content:
+    <h1>Page #$page.id</h1>
+    <pre>$page.content</pre>
+    $if page.nextpageid:
+        <p><a href="/pages/$page.nextpageid">Next page</a></p>
+$else:
+    <h1>Page #$page.id missing</h1>
+    <p>We don't seem to have a record for that page.</p>

@@ -1,0 +1,7 @@
+$def with (pages)
+<h1>Pages</h1>
+<p>Readable items in-game, like books.</p>
+<ul>
+$for p in pages:
+    <li><a href="/pages/$p.id">#$p.id: $p.content[:30]</a></li>
+</ul>
